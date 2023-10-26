@@ -83,6 +83,15 @@ print (palindromo ("hooh"))
 print (palindromo ("aooh"))
 print (palindromo ("1221"))
 
+
+#----------------------------------------------------------
+#7.1)----------------------------------------------------------
+def longitudValidaVerde(texto:str )->bool:
+    return len(texto)> 8
+
+def fortalecerContrasenia(contra:str) -> str :
+    devolverContrasenia :str = "AMARRILLA"
+    if(longitudValidaVerde(contra) and tiene1Minuscula(contra) and tiene1Mayuscula )
 #4.2)-----------------------------------------------------
 #def reemplazaVocales (LaLista :list )-> list :
    # if x not in "aeiou" :
