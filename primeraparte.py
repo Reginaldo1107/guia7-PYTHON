@@ -79,19 +79,67 @@ def palindromo (texto : str) ->bool :
         i+=1    
     return esPalindromo
 
-print (palindromo ("hooh"))
-print (palindromo ("aooh"))
-print (palindromo ("1221"))
 
 
 #----------------------------------------------------------
 #7.1)----------------------------------------------------------
-def longitudValidaVerde(texto:str )->bool:
+def longitudValidaVerde(texto:str )->bool: 
     return len(texto)> 8
+
+def tiene1Minuscula(texto :str)-> bool :
+    tieneLetraMinuscula : bool = False 
+    for i in range (0 , len(texto),1):
+        if (texto[i] >= 'a'  and texto[i] <= 'z'):
+            tieneLetraMinuscula = True 
+    return tieneLetraMinuscula
+
+
+def tiene1Mayuscula(texto :str)-> bool :
+    tieneLetraMayuscula : bool = False 
+    for i in range (0 , len(texto),1):
+        if (texto[i] >= 'A'  and texto[i] <= 'Z'):
+            tieneLetraMayuscula = True 
+    return tieneLetraMayuscula
+    
+
+def tieneDigitoNumerico(texto :str)-> bool :
+    tieneDigitoNumerico : bool = False 
+    for i in range (0 , len(texto),1):
+        if (texto[i] >= '0'  and texto[i] <= '9'):
+            tieneDigitoNumerico = True 
+    return tieneDigitoNumerico
+    
+def lognitudValidaRoja(texto :str) ->bool:    
+    return len(texto) < 5
 
 def fortalecerContrasenia(contra:str) -> str :
     devolverContrasenia :str = "AMARRILLA"
-    if(longitudValidaVerde(contra) and tiene1Minuscula(contra) and tiene1Mayuscula )
+    if(longitudValidaVerde(contra) and tiene1Minuscula(contra) and tiene1Mayuscula(contra) and tieneDigitoNumerico(contra) ):
+        devolverContrasenia = "VERDE"
+    elif(lognitudValidaRoja(contra)) :
+        devolverContrasenia = "ROJA"   
+
+    return devolverContrasenia
+    
+    
+print(fortalecerContrasenia ("12345678fnvbnsd"))
+print(fortalecerContrasenia ("12345678zZ"))
+print(fortalecerContrasenia ("REGINAldosad"))
+print(fortalecerContrasenia ("REG1"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #4.2)-----------------------------------------------------
 #def reemplazaVocales (LaLista :list )-> list :
    # if x not in "aeiou" :
