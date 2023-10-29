@@ -121,25 +121,54 @@ def fortalecerContrasenia(contra:str) -> str :
 
     return devolverContrasenia
     
-    
-print(fortalecerContrasenia ("12345678fnvbnsd"))
-print(fortalecerContrasenia ("12345678zZ"))
-print(fortalecerContrasenia ("REGINAldosad"))
-print(fortalecerContrasenia ("REG1"))
+def monedero(listaTupla :list((str,int))) -> int :
+    total: int = 0 
+    totalIngresados : int = 0 
+    totalRetirado :int = 0 
+    for i in range (0 , len(listaTupla),1) :
+        if(listaTupla[i][0] == "I"): 
+            totalIngresados += listaTupla[i][1]
+        elif(listaTupla[i][0] == "R"):
+            totalRetirado += listaTupla[i][1]
+
+    total = totalIngresados - totalRetirado
+    return total
+
+print(monedero([("I",1),("I",1),("I",1),("I",1),("I",1),("I",1),("I",1),("I",1),("I",1)]))
+print(monedero([("I",1),("I",1),("I",1),("I",1),("I",1),("R",1),("R",1),("R",1),("R",1)]))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+def vocalesDistintas3 (palabra :str) ->bool:
+    vocalA :int = 0 
+    vocalE :int = 0 
+    vocalI :int = 0 
+    vocalO :int = 0 
+    vocalU :int = 0 
+    vocales3DistintasNunero :int  = 0
+    tiene3vocales :bool = False
+    for i in range (0 ,len(palabra),1):
+        if(palabra[i]== 'a'):
+            vocalA = 1 
+        elif (palabra[i]== 'e'):
+            vocalE = 1 
+        elif(palabra[i]== 'i'):
+            vocalI = 1 
+        elif (palabra[i]== 'o'):
+            vocalO = 1
+        elif (palabra[i]== 'u'):
+            vocalU = 1
+    vocales3DistintasNunero =  vocalA + vocalE + vocalI + vocalO + vocalU 
+    if(vocales3DistintasNunero>= 3):
+        tiene3vocales = True
+        
+    return tiene3vocales    
+        
+        
+print(vocalesDistintas3("hoaaeila"))        
+        
+        
+        
+                    
 #4.2)-----------------------------------------------------
 #def reemplazaVocales (LaLista :list )-> list :
    # if x not in "aeiou" :
