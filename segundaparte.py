@@ -49,8 +49,7 @@ def reemplazaVocales(listaChar :list) -> list :
             listaAuxiliar+=listaChar[i]
               
     return listaAuxiliar    
-<<<<<<< HEAD
-        
+
 #2.5
 def daVueltaStr(listaChar :list) -> list :
     listaAuxiliar =[]
@@ -104,24 +103,6 @@ def aprobar (listaDeNotas : list ) -> int :
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-
-
 #2.5
 #2.6
 # 3 
@@ -164,7 +145,6 @@ def elMonedero ()-> list :
 
 
 print(elMonedero())
->>>>>>> a2c521a7dddff638db0d601bcc42804b9d915cdc
 
 
 
