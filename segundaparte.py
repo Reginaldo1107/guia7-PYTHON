@@ -49,6 +49,7 @@ def reemplazaVocales(listaChar :list) -> list :
             listaAuxiliar+=listaChar[i]
               
     return listaAuxiliar    
+<<<<<<< HEAD
         
 #2.5
 def daVueltaStr(listaChar :list) -> list :
@@ -118,6 +119,52 @@ def aprobar (listaDeNotas : list ) -> int :
 
 
 
+=======
+
+
+#2.5
+#2.6
+# 3 
+#4.1
+def listaDeEstudiantes () -> list :
+    LaListaDeEstudiantes :list= []
+    estudiantes  :str = input("Ingrese un estudiante si no lo desea escriba :listo ") 
+    while(estudiantes != "listo"):
+        LaListaDeEstudiantes.append(estudiantes)
+        estudiantes = input("Ingrese otro estudiante si no lo desea escriba :listo ")
+
+    return LaListaDeEstudiantes 
+#4.2
+def elMonedero ()-> list :
+    listaDeMovimientosTuplas :list = []
+    condicion : bool = True
+
+    while(condicion == True):
+        entrada : str = input("Para operarar, ingrese \n 'C' PARA CARGAR CREDITOS \n 'D' para extraer dinero \n 'X' para salir \n ")
+
+        
+        if(entrada == "C"):
+            numero :int  = int(input("Ingrese el monto a cargar : "))
+            tuplaDeMovimientos  = (entrada,numero)
+            listaDeMovimientosTuplas.append(tuplaDeMovimientos)
+        
+        elif(entrada == "D"):
+            numero :int  = int(input("Ingrese el monto a cargar : "))
+            tuplaDeMovimientos  = (entrada,numero)
+            listaDeMovimientosTuplas.append(tuplaDeMovimientos)
+        elif(entrada == "X") :   
+        
+            print ("Usted acaba de terminar su lista gratsia")
+            condicion =False
+        else : 
+            print ("ENTRADA INCORRECTA , VUELVA A INTENTARLO ")
+    
+    return listaDeMovimientosTuplas
+
+
+
+print(elMonedero())
+>>>>>>> a2c521a7dddff638db0d601bcc42804b9d915cdc
 
 
 
